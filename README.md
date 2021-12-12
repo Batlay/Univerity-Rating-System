@@ -6,10 +6,13 @@ JavaFX client-server app (db: mysql). Authorization: administrator, student, tea
 Authorization Window
 ![](images/1.jpg)
 
-Teacher Main Page
+Teacher Main Page (University News)
 ![](images/2.jpg)
+
+Groups and subjects of a teacher
 ![](images/3.jpg)
-Student rating
+
+Student rating 
 ![](images/4.jpg)
 
 Teacher Cabinet
@@ -21,7 +24,9 @@ Student Main Page
 Student Cabinet
 ![](images/7.jpg)
 ![](images/8.jpg)
-![](images/9.jpg)
 
 Administrator Window
-![](images/10.jpg)
+![](images/9.jpg)
+
+
+
