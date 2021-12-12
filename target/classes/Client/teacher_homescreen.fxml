@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="641.0" prefWidth="870.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.TeacherController.TeacherHomescreen">
+   <children>
+      <ImageView fitHeight="652.0" fitWidth="878.0" layoutX="-3.0" layoutY="-5.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/main.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="878.0" layoutX="-3.0" layoutY="29.0" opacity="0.36" pickOnBounds="true">
+         <image>
+            <Image url="@../img/black.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_logout" layoutX="804.0" layoutY="-3.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="71.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Выйти" textFill="WHITE">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="354.0" layoutY="28.0" mnemonicParsing="false" onAction="#subjects_title" prefHeight="36.0" prefWidth="186.0" style="-fx-background-color: transparent;" text="Группы/Предметы" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Comic Sans MS" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="682.0" layoutY="28.0" mnemonicParsing="false" onAction="#rating_title" prefHeight="34.0" prefWidth="103.0" style="-fx-background-color: transparent;" text="Рейтинг" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Comic Sans MS" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="109.0" layoutY="28.0" mnemonicParsing="false" onAction="#news" prefHeight="36.0" prefWidth="103.0" style="-fx-background-color: transparent;" text="Новости" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Comic Sans MS" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <AnchorPane fx:id="news_anchor" layoutX="22.0" layoutY="80.0" prefHeight="519.0" prefWidth="828.0" style="-fx-max-height: 1000px;" visible="false">
+         <children>
+            <ScrollPane layoutX="44.0" prefHeight="541.0" prefWidth="755.0">
+               <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3223.0" prefWidth="738.0" style="-fx-max-height: 5000px;">
+                     <children>
+                        <ImageView fitHeight="491.0" fitWidth="769.0" layoutX="2.0" layoutY="539.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../img/0aff90c82bce10b511084ace6efe4269.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="552.0" fitWidth="773.0" layoutX="-26.0" layoutY="-13.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../img/news.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="183.0" fitWidth="297.0" layoutX="420.0" layoutY="46.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../img/qui.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="209.0" fitWidth="313.0" layoutX="27.0" layoutY="539.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../img/uni1.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextArea layoutX="420.0" layoutY="229.0" prefHeight="146.0" prefWidth="297.0" style="-fx-background-color: #000000;" text="Составлен набор в команду университета по квидичу!" wrapText="true">
+                           <font>
+                              <Font name="Comic Sans MS Italic" size="22.0" />
+                           </font>
+                        </TextArea>
+                        <TextArea layoutX="26.0" layoutY="393.0" prefHeight="146.0" prefWidth="315.0" style="-fx-background-color: #000000;" text="Сборная университета по русской литературе выиграла международную олимпиаду. Состав команды: Тэмми, Джордан, Льюис. Наставник: капитан." wrapText="true">
+                           <font>
+                              <Font name="Comic Sans MS Italic" size="16.0" />
+                           </font>
+                        </TextArea>
+                        <TextArea layoutX="458.0" layoutY="884.0" prefHeight="146.0" prefWidth="315.0" style="-fx-background-color: #000000;" text="Книжний клуб в университе.&#10;Теперь вы можете обсуждать ваши любимые книги в стенах нашего университета.  Также вы можете воспользоваться услугами библиотеки." wrapText="true">
+                           <font>
+                              <Font name="Comic Sans MS Italic" size="16.0" />
+                           </font>
+                        </TextArea>
+                        <ImageView fitHeight="319.0" fitWidth="794.0" layoutX="4.0" layoutY="1030.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/professor-image.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextArea layoutX="4.0" layoutY="1030.0" prefHeight="115.0" prefWidth="315.0" style="-fx-background-color: #00000010;" text="31 декабря состоится встреча с профессором литературы Джонни Д.&#10;Время: 12-00.&#10;Вход: свободный." wrapText="true">
+                           <font>
+                              <Font name="Comic Sans MS Italic" size="16.0" />
+                           </font>
+                        </TextArea>
+                        <ImageView fitHeight="545.0" fitWidth="773.0" layoutX="4.0" layoutY="1349.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/maxresdefault.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextArea layoutY="1720.0" prefHeight="64.0" prefWidth="773.0" style="-fx-background-color: #00000010;" text="Идёт набор на курсы французского языка. Вы можете записаться на кафедре инностранных языков. 1 корпус, 4 этаж." wrapText="true">
+                           <font>
+                              <Font name="Comic Sans MS Italic" size="16.0" />
+                           </font>
+                        </TextArea>
+                        <ImageView fitHeight="480.0" fitWidth="773.0" layoutY="1787.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/uk-1231-920337-0-front.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextArea layoutX="450.0" layoutY="1820.0" prefHeight="104.0" prefWidth="297.0" style="-fx-background-color: #00000010;" text="НОВОГОДНЯЯ ВЕЧЕРИНКА!!!&#10;31 декабря, 23:00.&#10;Место: главный кампус.&#10;Стоимость билета: 5 рублей." wrapText="true">
+                           <font>
+                              <Font name="Comic Sans MS Italic" size="16.0" />
+                           </font>
+                        </TextArea>
+                        <ImageView fitHeight="514.0" fitWidth="1026.0" layoutX="4.0" layoutY="2254.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/f6Zgg5lSn6HwVUf5BNnr_DJU_Podcast_Cover.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="514.0" fitWidth="256.0" layoutX="516.0" layoutY="2254.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../img/HD-wallpaper-supra-forza-toyota.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="458.0" fitWidth="766.0" layoutX="4.0" layoutY="2768.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../img/jk.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <Button id="btn_student" layoutX="668.0" layoutY="1.0" mnemonicParsing="false" onAction="#cabinet" prefHeight="24.0" prefWidth="130.0" style="-fx-background-color: #FF7F5070; -fx-cursor: hand;" text="Учительская">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </Button>
+      <AnchorPane fx:id="rating_anchor" layoutX="-7.0" layoutY="71.0" prefHeight="576.0" prefWidth="878.0" visible="false">
+         <children>
+            <TableView fx:id="rate_tableview" layoutX="595.0" layoutY="-8.0" prefHeight="587.0" prefWidth="286.0" stylesheets="@homescreen.css">
+              <columns>
+                <TableColumn fx:id="stid_column" prefWidth="130.0" text="№ Cтуд. билета" />
+                <TableColumn fx:id="avg_column" prefWidth="154.0" text="Средняя оценка" />
+              </columns>
+            </TableView>
+            <Button layoutX="200.0" layoutY="383.0" mnemonicParsing="false" onAction="#rating" style="-fx-background-color: #FFFFFF99;" text="Рассчитать">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ComboBox fx:id="year" layoutX="163.0" layoutY="193.0" prefWidth="150.0" promptText="Год поступления" style="-fx-background-color: #FFFFFF99; -fx-border-color: #FFFFFF;" />
+            <ComboBox fx:id="faculty" layoutX="163.0" layoutY="241.0" prefWidth="150.0" promptText="Факультет" style="-fx-background-color: #FFFFFF99; -fx-border-color: #FFFFFF;" />
+            <ComboBox fx:id="spec" layoutX="163.0" layoutY="290.0" prefWidth="150.0" promptText="Сециальность" style="-fx-background-color: #FFFFFF99; -fx-border-color: #FFFFFF;" />
+            <ImageView fitHeight="27.0" fitWidth="33.0" layoutX="330.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/—Pngtree—correct%20icon_4701057.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="332.0" layoutY="242.0" mnemonicParsing="false" onAction="#faculty" prefHeight="25.0" prefWidth="22.0" style="-fx-background-color: transparent;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="subject_anchor" layoutX="8.0" layoutY="86.0" prefHeight="490.0" prefWidth="878.0" visible="false">
+         <children>
+            <TableView fx:id="subject_tableview" layoutX="-6.0" layoutY="2.0" prefHeight="486.0" prefWidth="881.0" stylesheets="@homescreen.css">
+               <columns>
+                  <TableColumn fx:id="group_column" prefWidth="123.0" text="Группа" />
+                  <TableColumn fx:id="sem_column" prefWidth="110.0" text="Семестр" />
+                  <TableColumn fx:id="discipline_column" prefWidth="189.0" text="Предмет" />
+                  <TableColumn fx:id="namesub_column" prefWidth="446.0" text="Расшифровка" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Text fx:id="date1" layoutX="57.0" layoutY="19.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="date2" layoutX="181.0" layoutY="18.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="date3" layoutX="312.0" layoutY="19.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+   </children>
+</AnchorPane>

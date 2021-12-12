@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.AdminController.AdminCabinet">
+   <children>
+      <BorderPane layoutX="464.0" layoutY="248.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="29.0" prefWidth="1180.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="#0091ea" layoutX="432.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Студент">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#0091ea" layoutX="615.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Преподаватель">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutX="565.0" layoutY="-4.0" orientation="VERTICAL" prefHeight="39.0" prefWidth="4.0" />
+                  <Separator layoutX="346.0" layoutY="-4.0" orientation="VERTICAL" prefHeight="39.0" prefWidth="9.0" />
+                  <Separator layoutX="782.0" layoutY="-3.0" orientation="VERTICAL" prefHeight="37.0" prefWidth="9.0" />
+                  <Text layoutX="121.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Администратор">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="btn_logout" layoutX="1114.0" layoutY="6.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Назад">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="btn_teacher" layoutX="575.0" layoutY="1.0" mnemonicParsing="false" onAction="#teacher" prefHeight="33.0" prefWidth="206.0" style="-fx-background-color: transparent;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btn_student" layoutX="355.0" layoutY="1.0" mnemonicParsing="false" onAction="#student" prefHeight="28.0" prefWidth="210.0" style="-fx-background-color: transparent;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <SplitPane fx:id="anchor_student" dividerPositions="0.29541595925297115" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="623.0" prefWidth="345.0">
+                     <children>
+                        <Button layoutX="10.0" layoutY="7.0" mnemonicParsing="false" onAction="#add_student" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #09B28C50; -fx-border-color: black;" text="Новый студент" AnchorPane.leftAnchor="10.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button layoutX="179.0" layoutY="7.0" mnemonicParsing="false" onAction="#edit_student" prefHeight="27.0" prefWidth="146.0" style="-fx-background-color: transparent; -fx-border-color: black;" text="Изменить">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button alignment="CENTER" layoutX="10.0" layoutY="41.0" mnemonicParsing="false" onAction="#delete" prefHeight="27.0" prefWidth="128.0" style="-fx-background-color: #FF3F3C99; -fx-border-color: black;" text="Удалить">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Separator layoutX="13.0" layoutY="78.0" prefHeight="4.0" prefWidth="322.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="78.0" />
+                        <GridPane layoutX="34.0" layoutY="125.0" prefHeight="230.0" prefWidth="293.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="125.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Имя">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="name_textField" disable="true" GridPane.columnIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Отчество" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="middlename_textField" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="id_textField" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Телефон" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="email_textField" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="phone_textField" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Пароль" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="password_textField" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Адрес" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="address_textField" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <TextField fx:id="lastname_textField" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </GridPane>
+                        <Text fill="#673ab7" layoutX="14.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Персональная информация" AnchorPane.bottomAnchor="478.7333984375" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="114.00927734375" AnchorPane.topAnchor="81.6552734375">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="14.0" layoutY="360.0" prefHeight="4.0" prefWidth="200.0" AnchorPane.bottomAnchor="224.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" />
+                        <Text fill="#673ab7" layoutX="14.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Распределение" AnchorPane.bottomAnchor="194.7333984375" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="170.0146484375">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <GridPane layoutX="33.0" layoutY="400.0" prefHeight="95.0" prefWidth="283.0" AnchorPane.bottomAnchor="88.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="29.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="btn_spec" disable="true" mnemonicParsing="false" onAction="#faculty1" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: transparent;" text="Выбрать" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Факультет">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Специальность" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Группа" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="adminTFGuardianPhone" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <ComboBox fx:id="faculty_combobox" disable="true" prefWidth="150.0" GridPane.columnIndex="1" />
+                              <ComboBox fx:id="spec_combobox" disable="true" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <ComboBox fx:id="group_combobox" disable="true" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Button fx:id="btn_group" disable="true" mnemonicParsing="false" onAction="#speciality1" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: transparent;" text="Выбрать" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                           </children>
+                        </GridPane>
+                        <Separator layoutX="13.0" layoutY="520.0" prefHeight="4.0" prefWidth="319.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" />
+                        <Button fx:id="save_student_btn" disable="true" layoutX="135.0" layoutY="539.0" mnemonicParsing="false" onAction="#save_student" prefHeight="23.0" prefWidth="80.0" style="-fx-background-color: #00000099; -fx-text-fill: white; -fx-border-color: black;" text="Сохранить" AnchorPane.bottomAnchor="17.0" AnchorPane.rightAnchor="130.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="add_student_btn1" disable="true" layoutX="21.0" layoutY="539.0" mnemonicParsing="false" onAction="#add_student1" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #00000099; -fx-text-fill: white; -fx-border-color: black;" text="Добавить">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="cancel_student_btn" alignment="CENTER" disable="true" layoutX="241.0" layoutY="539.0" mnemonicParsing="false" onAction="#cancel_student" prefHeight="27.0" prefWidth="80.0" style="-fx-background-color: #FF3F3C99; -fx-border-color: black;" text="Отмена">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="179.0" layoutY="41.0" mnemonicParsing="false" onAction="#change_group" prefHeight="27.0" prefWidth="146.0" style="-fx-background-color: transparent; -fx-border-color: black;" text="Изменить группу">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btn_submit" disable="true" layoutX="168.0" layoutY="506.0" mnemonicParsing="false" onAction="#submit" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: transparent;" text="Подтвердить">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="search_id_textField" layoutX="548.0" layoutY="14.0" promptText="Student ID" AnchorPane.rightAnchor="127.0" />
+                        <Button layoutX="721.0" layoutY="14.0" mnemonicParsing="false" onAction="#search_id" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #09B28C;" text="Поиск id" textFill="WHITE" AnchorPane.rightAnchor="23.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button layoutX="448.0" layoutY="14.0" mnemonicParsing="false" onAction="#search_choice" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #09B28C;" text="Поиск" textFill="WHITE" AnchorPane.leftAnchor="448.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button layoutX="470.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #09B28C;" text="Refresh" textFill="WHITE" visible="false" AnchorPane.leftAnchor="470.0" />
+                        <TableView fx:id="students_tableview" layoutX="1.0" layoutY="63.0" prefHeight="533.0" prefWidth="822.0" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="63.0">
+                          <columns>
+                            <TableColumn fx:id="stid_column" prefWidth="75.0" text="Студ ID" />
+                            <TableColumn fx:id="lastname_column" prefWidth="72.0" text="Фамилия" />
+                              <TableColumn fx:id="firstname_column" prefWidth="86.0" text="Имя" />
+                              <TableColumn fx:id="middlename_column" prefWidth="94.0" text="Отчество" />
+                              <TableColumn fx:id="group_column" prefWidth="69.0" text="Группа" />
+                              <TableColumn fx:id="spec_column" prefWidth="72.0" text="Спец" />
+                              <TableColumn fx:id="email_column" prefWidth="81.0" text="Email" />
+                              <TableColumn fx:id="phone_column" prefWidth="73.0" text="Телефон" />
+                              <TableColumn fx:id="password_column" prefWidth="79.0" text="Пароль" />
+                              <TableColumn fx:id="address_column" prefWidth="120.0" text="Адрес" />
+                          </columns>
+                        </TableView>
+                        <ComboBox fx:id="faculty" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="110.0" promptText="Факультет" style="-fx-background-color: #FFFFFF99; -fx-border-color: black;" />
+                        <ComboBox fx:id="spec" layoutX="174.0" layoutY="15.0" prefHeight="27.0" prefWidth="131.0" promptText="Специальность" style="-fx-background-color: #FFFFFF99; -fx-border-color: black;" />
+                        <ComboBox fx:id="group" layoutX="346.0" layoutY="15.0" prefHeight="25.0" prefWidth="96.0" promptText="Группа" style="-fx-background-color: #FFFFFF99; -fx-border-color: black;" />
+                        <Button layoutX="138.0" layoutY="16.0" mnemonicParsing="false" onAction="#faculty" prefHeight="25.0" prefWidth="1.0" text="Button">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button layoutX="310.0" layoutY="16.0" mnemonicParsing="false" onAction="#speciality" prefHeight="25.0" prefWidth="1.0" text="Button">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+      </BorderPane>
+      <SplitPane fx:id="anchor_teacher" dividerPositions="0.29541595925297115" layoutX="-2.0" layoutY="32.0" prefHeight="598.0" prefWidth="1186.0" visible="false">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="623.0" prefWidth="345.0">
+               <children>
+                  <Separator layoutX="13.0" layoutY="78.0" prefHeight="4.0" prefWidth="322.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="78.0" />
+                  <GridPane layoutX="34.0" layoutY="166.0" prefHeight="189.0" prefWidth="292.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="166.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="145.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="147.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="t_id" disable="true" GridPane.columnIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Телефон" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="t_email" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="t_phone" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Пароль" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="t_password" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Адрес" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="t_address" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Роль" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Никнейм" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="t_role" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="t_username" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                     </children>
+                  </GridPane>
+                  <Text fill="#673ab7" layoutX="14.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Персональная информация" AnchorPane.bottomAnchor="478.7333984375" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="114.00927734375" AnchorPane.topAnchor="81.6552734375">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutX="14.0" layoutY="360.0" prefHeight="4.0" prefWidth="200.0" AnchorPane.bottomAnchor="224.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" />
+                  <Text fill="#673ab7" layoutX="14.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Просмотр деятельности" AnchorPane.bottomAnchor="194.7333984375" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="170.0146484375">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <GridPane layoutX="33.0" layoutY="400.0" prefHeight="119.0" prefWidth="283.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="29.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Button fx:id="t_choose" disable="true" mnemonicParsing="false" onAction="#choose_subject" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: transparent;" text="Выбрать" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Группы">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Предметы" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="t_group" disable="true" prefWidth="150.0" GridPane.columnIndex="1" />
+                        <ComboBox fx:id="t_sub" disable="true" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <Separator layoutX="13.0" layoutY="520.0" prefHeight="4.0" prefWidth="319.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" />
+                  <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#add_teacher" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #09B28C50; -fx-border-color: black;" text="Новый учитель">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="CENTER" layoutX="14.0" layoutY="41.0" mnemonicParsing="false" onAction="#delete_teacher" prefHeight="27.0" prefWidth="128.0" style="-fx-background-color: #FF3F3C99; -fx-border-color: black;" text="Удалить">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="180.0" layoutY="28.0" mnemonicParsing="false" onAction="#edit_teacher" prefHeight="27.0" prefWidth="146.0" style="-fx-background-color: transparent; -fx-border-color: black;" text="Изменить">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="add_teacher_btn" disable="true" layoutX="20.0" layoutY="554.0" mnemonicParsing="false" onAction="#add_teacher1" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #00000099; -fx-text-fill: white; -fx-border-color: black;" text="Добавить">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="save_teacher_btn" disable="true" layoutX="135.0" layoutY="554.0" mnemonicParsing="false" onAction="#save_teacher" prefHeight="23.0" prefWidth="80.0" style="-fx-background-color: #00000099; -fx-text-fill: white; -fx-border-color: black;" text="Сохранить">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="t_name" disable="true" layoutX="34.0" layoutY="130.0" prefHeight="25.0" prefWidth="292.0" />
+                  <Button fx:id="cancel_teacher_btn" alignment="CENTER" layoutX="246.0" layoutY="554.0" mnemonicParsing="false" onAction="#cancel_teacher" prefHeight="27.0" prefWidth="80.0" style="-fx-background-color: #FF3F3C99; -fx-border-color: black;" text="Отмена">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TextField fx:id="search_id_textField1" layoutX="550.0" layoutY="27.0" promptText="ID учителя" AnchorPane.rightAnchor="132.0" />
+                  <Button layoutX="723.0" layoutY="27.0" mnemonicParsing="false" onAction="#search_id1" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #09B28C;" text="Поиск" textFill="WHITE" AnchorPane.rightAnchor="28.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="14.0" layoutY="27.0" mnemonicParsing="false" onAction="#search_choice1" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #09B28C;" text="Найти всех" textFill="WHITE" AnchorPane.leftAnchor="14.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="470.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #09B28C;" text="Refresh" textFill="WHITE" visible="false" AnchorPane.leftAnchor="470.0" />
+                  <TableView fx:id="teacher_tableview" layoutX="-1.0" layoutY="68.0" prefHeight="530.0" prefWidth="837.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="68.0">
+                     <columns>
+                        <TableColumn fx:id="stid_column1" prefWidth="55.0" text="ID" />
+                        <TableColumn fx:id="name_column" prefWidth="175.0" text="ФИО" />
+                        <TableColumn fx:id="username_column1" text="Никнейм" />
+                        <TableColumn fx:id="role_column" prefWidth="79.0" text="Роль" />
+                        <TableColumn fx:id="email_column1" prefWidth="102.0" text="Email" />
+                        <TableColumn fx:id="phone_column1" prefWidth="90.0" text="Телефон" />
+                        <TableColumn fx:id="password_column1" prefWidth="109.0" text="Пароль" />
+                        <TableColumn fx:id="address_column1" prefWidth="144.0" text="Адрес" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

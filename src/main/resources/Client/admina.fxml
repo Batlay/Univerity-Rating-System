@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="1012.0" style="-fx-background-color: #81c483;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.AdminController.AdminCabinet">
+   <children>
+      <ImageView fitHeight="987.0" fitWidth="2071.0" layoutX="-1055.0" layoutY="-203.0" nodeOrientation="INHERIT" pickOnBounds="true">
+         <image>
+            <Image url="@../img/6174960a4dea8.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="-8.0" layoutY="84.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="1012.0">
+         <children>
+            <Button fx:id="addEmpBtn" layoutX="47.0" layoutY="372.0" mnemonicParsing="false" onAction="#insertStudent" style="-fx-background-color: lightgreen;" text="Добавить студента" />
+            <Label layoutX="33.0" layoutY="443.0" text="Результат:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <VBox layoutX="97.0" layoutY="24.0" spacing="4.0" />
+            <VBox layoutX="9.0" layoutY="28.0" prefWidth="67.0" spacing="12.0" />
+            <Separator layoutY="15.0" prefHeight="36.0" prefWidth="213.0" />
+            <Separator layoutX="214.0" layoutY="-89.0" orientation="VERTICAL" prefHeight="790.0" prefWidth="5.0" />
+            <Label layoutX="36.0" layoutY="203.0" text="Name" textFill="#fff700">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect></Label>
+            <Label layoutX="28.0" layoutY="252.0" text="Surname" textFill="#fff700">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect></Label>
+            <Label layoutX="37.0" layoutY="304.0" text="Email" textFill="#fff700">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect></Label>
+            <Label layoutX="24.0" layoutY="45.0" text="Username" textFill="#fff700">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="44.45" radius="21.725" spread="0.46" width="44.45" />
+               </effect></Label>
+            <TextField fx:id="name_Text" layoutX="117.0" layoutY="201.0" prefHeight="25.0" prefWidth="79.0" promptText="Name" style="-fx-background-color: #9353f4;" />
+            <TextField fx:id="surname_Text" layoutX="117.0" layoutY="250.0" prefHeight="25.0" prefWidth="79.0" promptText="Surname" style="-fx-background-color: #9353f4;" />
+            <TextField fx:id="email_Text" layoutX="117.0" layoutY="302.0" prefHeight="25.0" prefWidth="79.0" promptText="Email" style="-fx-background-color: #9353f4;" />
+            <Label layoutX="39.0" layoutY="152.0" text="Role" textFill="#fff700">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow height="18.07" radius="20.259999999999998" spread="0.57" width="64.97" />
+               </effect></Label>
+            <TextField fx:id="role_Text" layoutX="117.0" layoutY="150.0" prefHeight="25.0" prefWidth="79.0" promptText="Role" style="-fx-background-color: #9353f4;" />
+            <Label layoutX="26.0" layoutY="99.0" text="Password" textFill="#fff700">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect></Label>
+            <TextField fx:id="password_Text" layoutX="117.0" layoutY="97.0" prefHeight="25.0" prefWidth="79.0" promptText="Password" style="-fx-background-color: #9353f4;" />
+            <TextField fx:id="username_Text" layoutX="117.0" layoutY="43.0" opacity="0.64" prefHeight="25.0" prefWidth="79.0" promptText="Username" style="-fx-background-color: #9353f4;">
+               <effect>
+                  <Reflection fraction="0.25" topOpacity="0.0" />
+               </effect></TextField>
+            <TableView fx:id="employeeTable" editable="true" layoutX="214.0" layoutY="74.0" prefHeight="464.0" prefWidth="795.0" stylesheets="@tableview.css" tableMenuButtonVisible="true">
+               <columns>
+                  <TableColumn id="id" fx:id="empIdColumn" prefWidth="42.0" text="Id" />
+                  <TableColumn fx:id="UsernameColumn" prefWidth="126.0" text="Username" />
+                  <TableColumn fx:id="empNameColumn" prefWidth="91.0" text="Name" />
+                  <TableColumn fx:id="empLastNameColumn" prefWidth="156.0" text="LastName" />
+                  <TableColumn fx:id="empEmailColumn" prefWidth="148.0" text="Email" />
+                  <TableColumn fx:id="empPhoneNumberColumn" prefWidth="97.0" text="Phone" />
+                  <TableColumn fx:id="PasswordColumn" prefWidth="130.0" text="Password" />
+               </columns>
+            </TableView>
+            <Button fx:id="searchEmpsBtn" layoutX="850.0" layoutY="42.0" mnemonicParsing="false" onAction="#searchStudents" prefHeight="27.0" prefWidth="149.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Список всех студентов" textFill="WHITE" />
+            <TextArea fx:id="resultArea" layoutX="28.0" layoutY="468.0" opacity="0.59" prefHeight="64.0" prefWidth="139.0" style="-fx-background-color: #1dbbdd44;" wrapText="true" />
+            <Separator layoutX="100.0" layoutY="28.0" orientation="VERTICAL" prefHeight="320.0" prefWidth="0.0" />
+            <Separator layoutX="-3.0" layoutY="348.0" prefHeight="3.0" prefWidth="213.0" />
+            <Separator layoutY="418.0" prefHeight="25.0" prefWidth="213.0" />
+            <Button fx:id="updateEmpBtn" layoutX="380.0" layoutY="15.0" mnemonicParsing="false"  prefHeight="36.0" prefWidth="93.0" style="-fx-background-color: transparent; -fx-border-color: black;" text="Обновить" textFill="#6df98a" />
+            <Button fx:id="searchEmpBtn" layoutX="242.0" layoutY="15.0" mnemonicParsing="false" onAction="#searchStudent" prefHeight="36.0" prefWidth="93.0" style="-fx-background-color: transparent; -fx-border-color: black;" text="Поиск по id" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteEmpBtn" layoutX="519.0" layoutY="15.0" mnemonicParsing="false" onAction="#deleteStudent" prefHeight="36.0" prefWidth="93.0" style="-fx-background-color: transparent; -fx-border-color: black;" text="Удалить" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Text fill="WHITE" layoutX="21.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Room">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <TextField fx:id="empIdText" layoutX="230.0" layoutY="53.0" opacity="0.28" prefHeight="27.0" prefWidth="309.0" promptText="Введите id">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="567.0" layoutY="58.0" text="ID студента" textFill="WHITE" />
+   </children>
+</AnchorPane>
