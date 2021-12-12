@@ -28,5 +28,6 @@ Student Cabinet
 Administrator Window
 ![](images/9.jpg)
 
+![](images/11.jpg)
 
 
